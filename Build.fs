@@ -30,32 +30,31 @@ let release = ReleaseNotes.load "RELEASE_NOTES.md"
 // The profile where the project is posted
 let gitHome = "https://github/tforkmann/"
 // The name of the project on GitHub
-let gitName = "Feliz.ChartJS"
+let gitName = "Feliz.ReactSlider"
 
 // The name of the project
 // (used by attributes in AssemblyInfo, name of a NuGet package and directory in 'src')
-let project = "Feliz.ChartJS"
+let project = "Feliz.ReactSlider"
 
 let projectUrl = sprintf "%s/%s" gitHome gitName
 
 // Short summary of the project
 // (used as description in AssemblyInfo and as a short summary for NuGet package)
-let summary = "Feliz React Binding for ChartJS"
+let summary = "Feliz React Binding for ReactSlider"
 
 let copyright = "Copyright \169 2022"
-let iconUrl = "https://raw.githubusercontent.com/tforkmann/Feliz.ChartJS/main/Feliz.ChartJS_logo.png"
-let licenceUrl = "https://github.com/tforkmann/Feliz.ChartJS/blob/master/LICENSE.md"
+let iconUrl = "https://raw.githubusercontent.com/tforkmann/Feliz.ReactSlider/main/Feliz.ReactSlider_logo.png"
+let licenceUrl = "https://github.com/tforkmann/Feliz.ReactSlider/blob/master/LICENSE.md"
 let configuration = DotNet.BuildConfiguration.Release
 
 // Longer description of the project
 // (used as a description for NuGet package; line breaks are automatically cleaned up)
-let description = """Feliz binding for React Chart JS."""
+let description = """Feliz binding for React Slider."""
 // List of author names (for NuGet package)
 let authors = [ "Tim Forkmann"]
 let owner = "tForkmann"
 // Tags for your project (for NuGet package)
-let tags = "fsharp;fable;ChartJS;feliz;react;charting"
-
+let tags = "fsharp;fable;react;react-slider;feliz"
 
 Target.create "Clean" (fun _ ->
     !!"src/**/bin"
@@ -166,7 +165,7 @@ Target.create "Pack" (fun _ ->
                   MSBuildParams = args
               }) projectPath
 
-    pack "Feliz.ChartJS"
+    pack "Feliz.ReactSlider"
 )
 
 let getBuildParam = Environment.environVar

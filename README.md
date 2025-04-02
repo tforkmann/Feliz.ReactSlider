@@ -1,23 +1,23 @@
-# Feliz Binding for [ChartJS](https://github.com/reactchartjs/react-chartjs-2)
+# Feliz Binding for [RC-Slider](https://github.com/react-component/slider)
 
-[![Feliz.ChartJS on Nuget](https://buildstats.info/nuget/Feliz.ChartJS)](https://www.nuget.org/packages/Feliz.ChartJS/)
-[![Docs](https://github.com/tforkmann/Feliz.ChartJS/actions/workflows/Docs.yml/badge.svg)](https://github.com/tforkmann/Feliz.ChartJS/actions/workflows/Docs.yml)
+[![Feliz.ReactSlider on Nuget](https://buildstats.info/nuget/Feliz.ReactSlider)](https://www.nuget.org/packages/Feliz.ReactSlider/)
+[![Docs](https://github.com/tforkmann/Feliz.ReactSlider/actions/workflows/Docs.yml/badge.svg)](https://github.com/tforkmann/Feliz.ReactSlider/actions/workflows/Docs.yml)
 
 ## Installation
 Install the nuget package
 ```
-dotnet paket add Feliz.ChartJS
+dotnet paket add Feliz.ReactSlider
 ```
 
 and install the npm package
 
 ```
-npm install --save react-chartjs-2 chart.js
+npm install --save rc-slider
 ```
 
 or use Femto:
 ```
-femto install Feliz.ChartJS
+femto install Feliz.ReactSlider
 ```
 
 ## Start test app
@@ -27,59 +27,22 @@ femto install Feliz.ChartJS
 dotnet run
 ```
 
-## Example ChartJS
-Here is an example ChartJS
+## Example ReactSlider
+
 ```fs
-ChartJS.line [
-        line.options [
-            option.responsive true
-            option.plugins[plugin.dataLabels [
-                               dataLabels.display true
-                               dataLabels.align Bottom
-                               dataLabels.borderRadius 3
-                               dataLabels.color "red"
-                               dataLabels.backgroundColor "green"
-                               ]]
-        ]
-        line.data [
-            lineData.labels [|
-                "Red"
-                "Blue"
-                "Yellow"
-                "Green"
-                "Purple"
-                "Orange"
-            |]
-            lineData.datasets [|
-                lineData.dataset [
-                    lineDataSet.label "My First Dataset"
-                    lineDataSet.borderColor "rgb(53, 162, 235)"
-                    lineDataSet.backgroundColor "rgba(53, 162, 235, 0.5)"
-                    lineDataSet.data [|
-                        "1"
-                        "2"
-                        "3"
-                        "4"
-                        "5"
-                        "6"
-                    |]
-                ]
-                lineData.dataset [
-                    lineDataSet.label "My Second Dataset"
-                    lineDataSet.borderColor "yellow"
-                    lineDataSet.backgroundColor "rgba(53, 162, 235, 0.5)"
-                    lineDataSet.data [|
-                        "1"
-                        "2"
-                        "3"
-                        "4"
-                        "4"
-                        "6"
-                    |]
-                ]
-            |]
+Here is an example ReactSlider
+```fs
+    ReactSlider.slider [
+        slider.min 20
+        slider.defaultValue 20
+        slider.stepNull
+        slider.marksWithStyle [
+            20, ("red", Html.text "20")
+            40, ("blue", Html.text "40")
+            100, ("green", Html.text "100")
         ]
     ]
+
 ```
 
-You can find more examples [here](https://tforkmann.github.io/Feliz.ChartJS/)
+You can find more examples [here](https://tforkmann.github.io/Feliz.ReactSlider/)

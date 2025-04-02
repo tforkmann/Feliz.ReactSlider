@@ -2,7 +2,7 @@ module Docs.Pages.LineChart
 
 open Feliz
 open Feliz.Bulma
-open Feliz.ChartJS
+open Feliz.ReactSlider
 open Docs.SharedView
 
 [<ReactComponent>]

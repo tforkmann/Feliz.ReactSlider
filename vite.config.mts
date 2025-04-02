@@ -12,7 +12,7 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview  }) => {
     return {
         plugins: [react(), tailwindcss()],
         root: "./src/Client",
-        base: isDev ? undefined : '/Feliz.ChartJS/',
+        base: isDev ? undefined : '/Feliz.ReactSlider/',
         build: {
             outDir: "../../publish/docs",
             emptyOutDir: true,
