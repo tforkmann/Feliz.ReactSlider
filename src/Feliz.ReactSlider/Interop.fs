@@ -7,7 +7,7 @@ open Fable.Core.JsInterop
 module Interop =
     importSideEffects "rc-slider/assets/index.css"
     let slider: obj = importDefault "rc-slider"
-
-    // let range: obj = import "Range" "rc-slider"
-
     let inline mkSliderProp (key: string) (value: obj) : ISliderProp = unbox (key, value)
+    let inline mkDotStyleProp (key: string) (value: obj) : IDotStyleProp = unbox (key, value)
+    let inline mkStyleProp (key: string) (value: obj) : ISliderStylesProp = unbox (key, value)
+    let inline mkSliderTrackProp (key: string) (value: obj) : ISliderTrackProp = unbox (key, value)

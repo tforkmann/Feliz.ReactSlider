@@ -25,6 +25,17 @@ let ReactSlider () =
             40, ("blue", Html.text "40")
             100, ("green", Html.text "100")
         ]
+        slider.styles [
+            sliderStyle.track [
+                sliderTrack.background "red"
+            ]
+        ]
+        slider.dotStyle [
+            dotStyle.borderColor "orange"
+        ]
+        slider.activeDotStyle [
+            dotStyle.borderColor "yellow"
+        ]
     ]
 
 let view (model: Model) (dispatch: Msg -> unit) =

@@ -1,7 +1,17 @@
 namespace Feliz.ReactSlider
 
-open Fable.Core
-
 type ISliderProp =
+    interface
+    end
+
+type ISliderStylesProp =
+    interface
+    end
+
+type ISliderTrackProp =
+    interface
+    end
+
+type IDotStyleProp =
     interface
     end
