@@ -98,11 +98,7 @@ let private leftSide (p: Page) =
                         Daisy.menuTitle [ Html.span "Docs" ]
                         mi "Install" Install
                         mi "Use" Use
-                        mi "LineChart" LineChart
-                        mi "BarChart" BarChart
-                        mi "DoughnutChart" DoughnutChart
-                        mi "MixedChart" MixedChart
-                        mi "BubbleChart" BubbleChart
+                        mi "Slider" Slider
                         ]
                 ]
             ]
@@ -135,11 +131,7 @@ let AppView (state: State) (dispatch: Msg -> unit) =
         match state.Page with
         | Install -> "Installation", "/docs/install", Pages.Install.InstallView()
         | Use -> "How to use", "/docs/use", Pages.Use.UseView()
-        | LineChart -> "LineChart", "/linechart", Pages.LineChart.LineChartView()
-        | BarChart -> "BarChart", "/barchart", Pages.BarChart.BarChartView()
-        | DoughnutChart -> "DoughnutChart", "/doughnutchart", Pages.DoughnutChart.DoughnutChartView()
-        | MixedChart -> "MixedChart", "/mixedchart", Pages.MixedChart.MixedChartView()
-        | BubbleChart -> "BubbleChart", "/bubblechart", Pages.BubbleChart.BubbleChartView()
+        | Slider -> "Slider", "/docs/slider", Pages.Slider.SliderView()
     React.router [
         router.hashMode
         router.onUrlChanged (

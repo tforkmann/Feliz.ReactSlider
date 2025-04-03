@@ -7,12 +7,7 @@ open Fable.Core.JsInterop
 type Page =
     | Install
     | Use
-    | LineChart
-    | BubbleChart
-    | BarChart
-    | DoughnutChart
-    | MixedChart
-
+    | Slider
 
 [<RequireQualifiedAccess>]
 module Page =
@@ -21,11 +16,7 @@ module Page =
     let parseFromUrlSegments =
         function
         | [ "use" ] -> Use
-        | [ "linechart" ] -> LineChart
-        | [ "barchart" ] -> BarChart
-        | [ "doughnutchart" ] -> DoughnutChart
-        | [ "mixedchart" ] -> MixedChart
-        | [ "bubblechart" ] -> BubbleChart
+        | [ "slider" ] -> Slider
         | [] -> Install
         | _ -> defaultPage
 
@@ -34,11 +25,7 @@ module Page =
     let toUrlSegments =
         function
         | Install -> [] |> noQueryString
-        | LineChart -> ["linechart"] |> noQueryString
-        | BarChart -> ["barchart"] |> noQueryString
-        | DoughnutChart -> ["doughnutchart"] |> noQueryString
-        | MixedChart -> ["mixedchart"] |> noQueryString
-        | BubbleChart -> ["bubblechart"] |> noQueryString
+        | Slider -> [ "slider" ] |> noQueryString
         | Use -> [ "use" ] |> noQueryString
 
 [<RequireQualifiedAccess>]

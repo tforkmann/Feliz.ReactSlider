@@ -15,7 +15,7 @@ Program.mkProgram View.init View.update View.AppView
 #if DEBUG
 |> Program.withConsoleTrace
 #endif
-|> Program.withReactSynchronous "elmish-app"
+|> Program.withReactSynchronous "safer-app"
 #if DEBUG
 |> Program.withDebugger
 #endif
