@@ -30,6 +30,9 @@ let ReactSlider () =
                 sliderTrack.background "red"
             ]
         ]
+        slider.onChange (fun value ->
+            Browser.Dom.console.log value
+        )
         slider.dotStyle [
             dotStyle.borderColor "orange"
         ]

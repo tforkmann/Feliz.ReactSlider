@@ -23,6 +23,8 @@ type slider =
     static member inline max (value: int) =
         Interop.mkSliderProp "max" value
 
+    static member inline onChange (handler: int -> unit) : ISliderProp =
+        !!( "onChange" ==> System.Func<_,_>handler)
     static member inline step (value: int) =
         Interop.mkSliderProp "step" value
     static member inline stepNull  =
