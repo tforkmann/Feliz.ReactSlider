@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 
+@plugin 'daisyui' {
+    themes: all;
+}
+
 html, body {
     height: 100%;
     scroll-behavior: smooth;
@@ -10,8 +14,4 @@ html, body {
     display: flex;
     flex-flow: column;
     height: 100%
-}
-
-@plugin 'daisyui' {
-    themes: all;
 }
