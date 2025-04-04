@@ -18,12 +18,20 @@ type ReactSlider =
 
 [<Erase>]
 type slider =
+    static member inline range =
+        Interop.mkSliderProp "range" isNullOrUndefined
+
+    static member inline allowCross (allowCross: bool) =
+        Interop.mkSliderProp "allowCross" allowCross
     static member inline min (value: int) =
         Interop.mkSliderProp "min" value
     static member inline max (value: int) =
         Interop.mkSliderProp "max" value
 
     static member inline onChange (handler: int -> unit) : ISliderProp =
+        !!( "onChange" ==> System.Func<_,_>handler)
+
+    static member inline onChangeRange (handler: int * int -> unit) : ISliderProp =
         !!( "onChange" ==> System.Func<_,_>handler)
     static member inline step (value: int) =
         Interop.mkSliderProp "step" value
@@ -32,6 +40,8 @@ type slider =
     static member inline value (value: int) =
         Interop.mkSliderProp "value" value
     static member inline defaultValue (value: int) =
+        Interop.mkSliderProp "defaultValue" value
+    static member inline defaultValueRange (value: int * int) =
         Interop.mkSliderProp "defaultValue" value
     static member inline dots (value: bool) =
         Interop.mkSliderProp "dots" value
