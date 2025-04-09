@@ -35,6 +35,8 @@ type slider =
         !!( "onChange" ==> System.Func<_,_>handler)
     static member inline step (value: int) =
         Interop.mkSliderProp "step" value
+    static member inline step (value: float) =
+        Interop.mkSliderProp "step" value
     static member inline stepNull  =
      Interop.mkSliderProp "step" isNullOrUndefined
     static member inline value (value: int) =
