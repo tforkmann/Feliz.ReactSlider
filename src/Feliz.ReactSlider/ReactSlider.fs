@@ -27,6 +27,10 @@ type slider =
         Interop.mkSliderProp "min" value
     static member inline max (value: int) =
         Interop.mkSliderProp "max" value
+    static member inline min (value: float) =
+        Interop.mkSliderProp "min" value
+    static member inline max (value: float) =
+        Interop.mkSliderProp "max" value
 
     static member inline onChange (handler: int -> unit) : ISliderProp =
         !!( "onChange" ==> System.Func<_,_>handler)
