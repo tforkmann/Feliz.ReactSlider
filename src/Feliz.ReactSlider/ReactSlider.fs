@@ -38,7 +38,7 @@ type slider =
     static member inline onChangeRange (handler: int * int -> unit) : ISliderProp =
         !!( "onChange" ==> System.Func<_,_>handler)
 
-    static member inline onChangeRange (handler: float * float -> unit) : ISliderProp =
+    static member inline onChangeRangeFloats (handler: float * float -> unit) : ISliderProp =
         !!( "onChange" ==> System.Func<_,_>handler)
     static member inline step (value: int) =
         Interop.mkSliderProp "step" value
@@ -57,7 +57,7 @@ type slider =
         Interop.mkSliderProp "defaultValue" value
     static member inline defaultValueRange (value: int * int) =
         Interop.mkSliderProp "defaultValue" value
-    static member inline defaultValueRange (value: float * float) =
+    static member inline defaultValueRangeFloats (value: float * float) =
         Interop.mkSliderProp "defaultValue" value
 
     static member inline dots (value: bool) =
