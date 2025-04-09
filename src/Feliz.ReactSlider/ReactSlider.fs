@@ -37,6 +37,9 @@ type slider =
 
     static member inline onChangeRange (handler: int * int -> unit) : ISliderProp =
         !!( "onChange" ==> System.Func<_,_>handler)
+
+    static member inline onChangeRange (handler: float * float -> unit) : ISliderProp =
+        !!( "onChange" ==> System.Func<_,_>handler)
     static member inline step (value: int) =
         Interop.mkSliderProp "step" value
     static member inline step (value: float) =
