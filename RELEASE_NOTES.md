@@ -1,3 +1,5 @@
+#### 0.3.6 - 2025-04-10
+* More float overloads
 #### 0.3.5 - 2025-04-10
 * onChangeRange in float * float
 #### 0.3.4 - 2025-04-10

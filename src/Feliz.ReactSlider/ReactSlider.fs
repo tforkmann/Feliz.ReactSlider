@@ -48,10 +48,18 @@ type slider =
      Interop.mkSliderProp "step" isNullOrUndefined
     static member inline value (value: int) =
         Interop.mkSliderProp "value" value
+    static member inline value (value: float) =
+        Interop.mkSliderProp "value" value
     static member inline defaultValue (value: int) =
+        Interop.mkSliderProp "defaultValue" value
+
+    static member inline defaultValue (value: float) =
         Interop.mkSliderProp "defaultValue" value
     static member inline defaultValueRange (value: int * int) =
         Interop.mkSliderProp "defaultValue" value
+    static member inline defaultValueRange (value: float * float) =
+        Interop.mkSliderProp "defaultValue" value
+
     static member inline dots (value: bool) =
         Interop.mkSliderProp "dots" value
     static member inline disabled (value: bool) =
