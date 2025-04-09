@@ -1,4 +1,4 @@
-#### 0.3.4 - 2025-04-10
+#### 0.3.5 - 2025-04-10
 * onChangeRange in float * float
 #### 0.3.4 - 2025-04-10
 * Min max in float
